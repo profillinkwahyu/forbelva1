@@ -1,0 +1,47 @@
+/* Efek Kertas */
+.paper-effect {
+    background-color: #fff;
+    background-image: 
+        linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+        linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
+    border-radius: 2px;
+    box-shadow: #ccc 0px 0px 5px;
+    position: relative;
+}
+
+.paper-effect::before {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background: url('https://www.transparenttextures.com/patterns/pinstriped-suit.png');
+    opacity: 0.1;
+}
+
+/* Efek Polaroid */
+.polaroid {
+    background: white;
+    padding: 15px 15px 40px 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.polaroid p {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+@keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.animate-bounce-slow { animation: bounce-slow 3s infinite; }
+
